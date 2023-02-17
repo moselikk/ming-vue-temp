@@ -1,0 +1,13 @@
+{
+  "hello": "你好",
+  "welcome to use": "欢迎使用",
+  "initial template": "此初始模板 ！",
+  "home": "主页",
+  "change light": "切换为亮色主题",
+  "change dark": "切换为暗黑主题",
+  "change lang": "切换语言",
+  "about": "关于",
+  "template process": "模板配置流程",
+  "tips": "提示消息",
+  "tip content": "页面加载完成"
+}
