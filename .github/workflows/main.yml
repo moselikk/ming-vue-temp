@@ -1,0 +1,28 @@
+# CI CD workflow
+name: Build And Deploy To Github Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          folder: dist
+#
+# LICENSE: MIT
+# 2023.1.12
+# code by: moselikk
