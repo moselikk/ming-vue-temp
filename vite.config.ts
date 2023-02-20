@@ -3,6 +3,10 @@ import { resolve } from 'path';
 
 import presets from './presets/presets';
 
+// eslint-disable-next-line no-control-regex
+const INVALID_CHAR_REGEX = /[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g;
+const DRIVE_LETTER_REGEX = /^[a-z]:/i;
+
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
   // env 环境变量
@@ -45,6 +49,12 @@ export default defineConfig((env) => {
       // 静态资源打包到dist下的不同目录
       rollupOptions: {
         output: {
+          // 打包后文件名去除 _ 解决 Gitpags 404
+          sanitizeFileName(fileName) {
+            const match = DRIVE_LETTER_REGEX.exec(fileName);
+            const driveLetter = match ? match[0] : '';
+            return driveLetter + fileName.slice(driveLetter.length).replace(INVALID_CHAR_REGEX, '');
+          },
           chunkFileNames: 'static/js/[name]-[hash].js',
           entryFileNames: 'static/js/[name]-[hash].js',
           assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
