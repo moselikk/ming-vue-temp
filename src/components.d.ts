@@ -7,13 +7,25 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElResult: typeof import('element-plus/es')['ElResult']
     ElRow: typeof import('element-plus/es')['ElRow']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     IAkarIconsGithubFill: typeof import('~icons/akar-icons/github-fill')['default']
+    ICarbonCampsite: typeof import('~icons/carbon/campsite')['default']
+    IEpAddLocation: typeof import('~icons/ep/add-location')['default']
+    IIcBaseline60fps: typeof import('~icons/ic/baseline60fps')['default']
     ILaLanguage: typeof import('~icons/la/language')['default']
     IMdiContentDuplicate: typeof import('~icons/mdi/content-duplicate')['default']
     IMdiHomeSearchOutline: typeof import('~icons/mdi/home-search-outline')['default']
@@ -22,6 +34,7 @@ declare module '@vue/runtime-core' {
     IRiArticleLine: typeof import('~icons/ri/article-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./components/SvgIcon.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
   }
 }

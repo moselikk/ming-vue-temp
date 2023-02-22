@@ -19,8 +19,8 @@
       </button>
     </el-tooltip>
 
-    <el-tooltip :content="t('about')" placement="bottom">
-      <router-link to="/about" class="icon-btn">
+    <el-tooltip :content="t('management')" placement="bottom">
+      <router-link to="/management" class="icon-btn">
         <i-ri-article-line class="icon-footer" />
       </router-link>
     </el-tooltip>

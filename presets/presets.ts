@@ -9,6 +9,7 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
 import { ConfigEnv } from 'vite';
 import { resolve } from 'path';
+import path from 'path';
 
 const defaultClasses = 'prose prose-sm m-auto text-left';
 
@@ -27,7 +28,12 @@ export default (env: ConfigEnv) => {
         filepath: './.eslintrc-auto-import.json',
         globalsPropValue: true,
       },
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver(),
+        IconsResolver({
+          prefix: 'Icon',
+        }),
+      ],
     }),
     Components({
       dts: './src/components.d.ts',

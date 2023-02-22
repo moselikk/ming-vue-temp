@@ -10,5 +10,4 @@ const locale = zhCn;
       <router-view></router-view>
     </el-config-provider>
   </div>
-  <TheFooter></TheFooter>
 </template>
