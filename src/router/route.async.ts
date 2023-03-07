@@ -35,26 +35,14 @@ const asyncRoutes: Array<RouteRecordRaw> = [
             name: 'dashbord',
             meta: { title: '看板', icon: 'location', affix: true, keepAlive: true },
           },
-          {
-            path: '/management/sub1/about',
-            component: () => import('@/views/about/index.vue'),
-            name: 'about',
-            meta: { title: '关于', icon: 'location', affix: true, keepAlive: true },
-          },
         ],
       },
       {
         path: '/management/sub2',
         name: 'sub2',
         redirect: '/management/sub1/dashbord',
-        meta: { title: '选项二', icon: 'Setting', affix: true, keepAlive: true },
+        meta: { title: '选项二', icon: 'setting', affix: true, keepAlive: true },
         children: [
-          {
-            path: '/management/sub2/dashbord',
-            component: () => import('@/views/dashbord/index.vue'),
-            name: 'dashbord2',
-            meta: { title: '看板', icon: 'homepage', affix: true, keepAlive: true },
-          },
           {
             path: '/management/sub2/about',
             component: () => import('@/views/about/index.vue'),

@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     IRiArticleLine: typeof import('~icons/ri/article-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./components/SvgIcon.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
   }
 }

@@ -7,6 +7,7 @@
       <h1 class="title">{{ t('hello') }} , {{ t('welcome to use') }}{{ t('initial template') }}</h1>
     </div>
   </div>
+  <SvgIcon :icon-name="'location'"></SvgIcon>
   <TheFooter></TheFooter>
 </template>
 
