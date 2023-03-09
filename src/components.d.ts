@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    Hitokoto: typeof import('./components/Hitokoto.vue')['default']
     IAkarIconsGithubFill: typeof import('~icons/akar-icons/github-fill')['default']
     IIcBaseline60fps: typeof import('~icons/ic/baseline60fps')['default']
     ILaLanguage: typeof import('~icons/la/language')['default']

@@ -14,7 +14,7 @@
 const router = useRouter();
 const goBack = () => {
   router.push({
-    name: 'management',
+    name: 'home',
   });
 };
 </script>
