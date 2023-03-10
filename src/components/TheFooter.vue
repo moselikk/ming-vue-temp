@@ -1,17 +1,17 @@
 <template>
   <div class="text-center">
-    <el-tooltip :content="t('home')" placement="bottom">
+    <!-- <el-tooltip :content="t('home')" placement="bottom">
       <router-link to="/" class="icon-btn">
         <i-mdi-home-search-outline class="icon-footer" />
       </router-link>
-    </el-tooltip>
+    </el-tooltip> -->
 
-    <el-tooltip :content="isDark ? t('change light') : t('change dark')" placement="bottom">
+    <!-- <el-tooltip :content="isDark ? t('change light') : t('change dark')" placement="bottom">
       <button class="icon-btn btn" @click="toggleDark()">
         <i-ph-cloud-moon-bold v-if="isDark" class="icon-footer" />
         <i-ph-sun-horizon-bold v-else class="icon-footer" />
       </button>
-    </el-tooltip>
+    </el-tooltip> -->
 
     <el-tooltip :content="t('change lang')" placement="bottom">
       <button class="icon-btn btn" @click="toggleLocales()">

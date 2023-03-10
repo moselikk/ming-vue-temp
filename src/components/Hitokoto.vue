@@ -3,7 +3,6 @@
     <el-icon style="margin-right: 10px">
       <SvgIcon icon-name="hitokoto"></SvgIcon>
     </el-icon>
-    <p>{{ props.headerWidth }}</p>
     <p>{{ hitokoto }}</p>
   </div>
 </template>
@@ -11,8 +10,6 @@
 <script setup lang="ts">
 import hitokotoApi from '@/api/modules/hitokoto';
 
-const props = defineProps(['headerWidth']);
-const hitokotoRef = ref<HTMLElement>();
 const hitokoto = ref('');
 
 const getHitokoto = () => {
